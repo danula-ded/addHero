@@ -9,6 +9,7 @@
 
 body {
     padding: 0;
+    margin: 0;
 }
 
 .title{
@@ -17,22 +18,23 @@ body {
     font-size: 40px;
 }
 
-#heroesContainer {
+#cards-container {
     margin-top: 5%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 95%;
-    max-width: 1240px;
+    max-width: 90%;
     gap: 40px;
+    padding: 0 5%;
 }
 
-div {
+.card {
     display: flex;
     flex-direction: column;
     padding: 8px;
     width: 100%;
     max-width: 320px;
+    min-width: 200px;
     border: 1px solid #001520;
     border-radius: 5px;
     font-family: "Soyuz Grotesk", sans-serif;
@@ -41,16 +43,23 @@ div {
     align-items: center;
 }
 
-div h3{
+.card-title-text{
     font-size: 28px;
     border-bottom: 2px solid;
 }
-div h3::first-letter{
+.card-title-text::first-letter{
     font-size: 40px;
     color: red;
 }
-div p{
-    font-size: 20px;
+
+.card-parameters{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    text-align: center;
+}
+
+.card-parameter-title::first-letter{
+    color: blueviolet;
 }
 
 .form{
@@ -59,4 +68,14 @@ div p{
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+
+.form-parameters{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 6px;
+}
+
+.parameter-input{
+    width: 75px;
 }
